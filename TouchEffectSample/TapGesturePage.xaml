@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TouchEffectSample.TapGesturePage"
+    Title="TAP GESTURE">
+
+    <StackLayout VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="CenterAndExpand">
+
+        <Label FontSize="Title"
+               HorizontalOptions="CenterAndExpand"
+               Text="{Binding Count}"/>
+
+        <StackLayout BackgroundColor="LightGray"
+                     Margin="30, 20">
+
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding IncreaseCommand}" />
+            </StackLayout.GestureRecognizers>
+
+
+            <Label Text="Click" />
+            <BoxView Style="{StaticResource Separator}" />
+            <Label Text="Me" />
+            <BoxView Style="{StaticResource Separator}" />
+            <Label Text="To increase counter" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
